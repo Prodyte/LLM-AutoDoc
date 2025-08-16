@@ -219,25 +219,25 @@ def main():
         epilog="""
 Examples:
   # Setup environment
-  etc-repo setup
+  autodoc setup
   
   # Run diagnostics
-  etc-repo setup --diagnostics
+  autodoc setup --diagnostics
   
   # Generate PR comments guidelines
-  etc-repo generate https://github.com/owner/repo -k 10
+  autodoc generate https://github.com/owner/repo -k 10
   
   # Generate documentation for local repo
-  etc-repo document /path/to/repo
+  autodoc document /path/to/repo
   
   # Generate documentation for remote repo (clones automatically)
-  etc-repo document https://github.com/owner/repo --compress
+  autodoc document https://github.com/owner/repo --compress
   
   # Get top PRs by comment count
-  etc-repo top https://github.com/owner/repo -k 5
+  autodoc top https://github.com/owner/repo -k 5
   
   # Analyze specific PR
-  etc-repo pr https://github.com/owner/repo/pull/123
+  autodoc pr https://github.com/owner/repo/pull/123
 
 Environment Variables:
   GITHUB_TOKEN            GitHub personal access token

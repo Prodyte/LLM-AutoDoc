@@ -13,7 +13,7 @@ setup(
     entry_points={
         'console_scripts': [
             'etc-pr=LLM-AutoDoc.cli:main',
-            'etc-repo=LLM-AutoDoc.unified_cli:main',
+            'autodoc=LLM-AutoDoc.unified_cli:main',
         ],
     },
     author="",

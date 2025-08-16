@@ -75,10 +75,10 @@ The unified tool provides several commands for different use cases:
 Set up all required dependencies and validate configuration:
 ```bash
 # Complete environment setup
-etc-repo setup
+autodoc setup
 
 # Run diagnostics to check current setup
-etc-repo setup --diagnostics
+autodoc setup --diagnostics
 ```
 
 ### PR Comments Analysis
@@ -87,35 +87,35 @@ etc-repo setup --diagnostics
 Extract coding guidelines from PR review comments:
 ```bash
 # Generate guidelines from top 10 PRs
-etc-repo generate https://github.com/owner/repo -k 10
+autodoc generate https://github.com/owner/repo -k 10
 
 # Custom output file
-etc-repo generate https://github.com/owner/repo -k 5 --output my-guidelines.txt
+autodoc generate https://github.com/owner/repo -k 5 --output my-guidelines.txt
 
 # Resume interrupted processing
-etc-repo generate https://github.com/owner/repo -k 10 --resume
+autodoc generate https://github.com/owner/repo -k 10 --resume
 ```
 
 #### Analyze Top PRs
 Get repositories with most review activity:
 ```bash
 # Top 5 PRs by comment count
-etc-repo top https://github.com/owner/repo -k 5
+autodoc top https://github.com/owner/repo -k 5
 
 # JSON output format
-etc-repo top https://github.com/owner/repo -k 10 --format json
+autodoc top https://github.com/owner/repo -k 10 --format json
 ```
 
 #### Analyze Specific PR
 Get detailed information about a specific PR:
 ```bash
-etc-repo pr https://github.com/owner/repo/pull/123
+autodoc pr https://github.com/owner/repo/pull/123
 ```
 
 #### Classify PR Comments
 Analyze and classify PR comments:
 ```bash
-etc-repo classify https://github.com/owner/repo -k 5 --output analysis.txt
+autodoc classify https://github.com/owner/repo -k 5 --output analysis.txt
 ```
 
 ### Documentation Generation
@@ -123,25 +123,25 @@ etc-repo classify https://github.com/owner/repo -k 5 --output analysis.txt
 #### Generate Documentation for Local Repository
 ```bash
 # Basic documentation generation
-etc-repo document /path/to/local/repo
+autodoc document /path/to/local/repo
 
 # With custom output file
-etc-repo document /path/to/local/repo --output my-docs.md
+autodoc document /path/to/local/repo --output my-docs.md
 
 # Generate both full and compressed versions
-etc-repo document /path/to/local/repo --compress
+autodoc document /path/to/local/repo --compress
 ```
 
 #### Generate Documentation for Remote Repository
 ```bash
 # Clone and generate documentation
-etc-repo document https://github.com/owner/repo
+autodoc document https://github.com/owner/repo
 
 # Keep cloned repository after processing
-etc-repo document https://github.com/owner/repo --keep-clone
+autodoc document https://github.com/owner/repo --keep-clone
 
 # Generate compressed documentation
-etc-repo document https://github.com/owner/repo --compress
+autodoc document https://github.com/owner/repo --compress
 ```
 
 ## Command Reference
@@ -201,22 +201,22 @@ Classify PR comments using Bedrock.
 ### Complete Workflow Example
 ```bash
 # 1. Generate coding guidelines from PR comments
-etc-repo generate https://github.com/facebook/react -k 15 --output react-guidelines.txt
+autodoc generate https://github.com/facebook/react -k 15 --output react-guidelines.txt
 
 # 2. Generate comprehensive documentation
-etc-repo document https://github.com/facebook/react --compress --output react-docs.md
+autodoc document https://github.com/facebook/react --compress --output react-docs.md
 
 # 3. Analyze top PRs for insights
-etc-repo top https://github.com/facebook/react -k 10 --format json > react-top-prs.json
+autodoc top https://github.com/facebook/react -k 10 --format json > react-top-prs.json
 ```
 
 ### Local Development Workflow
 ```bash
 # Generate documentation for current project
-etc-repo document . --compress
+autodoc document . --compress
 
 # Analyze your team's PR patterns
-etc-repo generate https://github.com/yourorg/yourproject -k 20
+autodoc generate https://github.com/yourorg/yourproject -k 20
 ```
 
 ## File Formats
