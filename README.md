@@ -1,5 +1,3 @@
-# ETC Context - Unified GitHub Repository Analysis Tool
-
 A powerful CLI tool that combines PR comments mining and automated documentation generation for GitHub repositories. Extract coding guidelines from PR reviews and generate comprehensive documentation using AWS Bedrock LLM.
 
 ## Features
